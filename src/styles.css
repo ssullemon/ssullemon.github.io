@@ -107,6 +107,22 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   white-space: nowrap;
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-lang {
+  display: inline-flex;
+  gap: 4px;
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  padding-left: 12px;
+  border-left: 1px solid var(--line);
+}
+.nav-lang a {
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: var(--ink-50);
+  transition: color 0.15s, background 0.15s;
+}
+.nav-lang a:hover { color: var(--ink); background: var(--ink-05); }
+.nav-lang a.active { color: var(--ink); font-weight: 700; }
 .nav-cta {
   padding: 8px 14px;
   border: 1px solid var(--ink);
