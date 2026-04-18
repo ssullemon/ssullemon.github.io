@@ -51,7 +51,7 @@ const Nav = ({ t, onTweaksToggle }) => (
     <div className="nav-inner">
       <a className="logo" href="#top">
         <span className="logo-dot" />
-        <span>koreapants</span>
+        <span>ssullemmon</span>
         <span className="logo-badge">BETA v0.3.1</span>
       </a>
       <div className="nav-links">
