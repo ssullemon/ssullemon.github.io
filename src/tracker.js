@@ -2,7 +2,7 @@
 (function () {
   var SUPABASE_URL = 'https://iswwjhrmswcxbpctgzyj.supabase.co';
   var SUPABASE_KEY = 'sb_publishable_m5c_aT_bw-HECc__kgkeqQ_V0-MOtLH';
-  var SITE = 'ssullemmon';
+  var SITE = 'ssullemon';
 
   function waitForSupabase(cb) {
     if (window.supabase && window.supabase.createClient) return cb();
