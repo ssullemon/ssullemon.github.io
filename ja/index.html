@@ -407,40 +407,11 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section reveal" id="faq">
-  <div class="container">
-    <header class="section-head">
-      <span class="kicker">04 — 収益モデル & FAQ</span>
-      <h2 class="section-title">どうやって稼ぐのか?
-短く言うと、今は稼いでいません。</h2>
-    </header>
-    <div class="faq-wrap">
-      <div class="faq-item open">
-        <button class="faq-q"><span>本当に完全無料?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">はい。カード登録画面も、「7日後に自動課金」のような罠もありません。アプリの中に決済画面自体が存在しません。ユーザー1万人まではこの構造のまま維持します。</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>ではどう維持しているの?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">作っている2人の自腹。サーバー代は月34万ウォン程度で、しばらく持ちます。今後は広告ではなく「任意サブスク (月3,900ウォン、完結作早期閲覧)」モデルを検討中。広告は入れません。</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>出典コミュの著作権は?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">ネタには原文リンクと投稿者ハンドルを必ず併記。投稿者の要望があれば24時間以内に削除します。小説は全て契約作家のオリジナル、または正式ライセンスのみ。</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>iOS / Android 両方対応?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">React Nativeのシングルコードベース。AndroidはGoogle Playでリリース済み。iOSはApp Store審査待ち (2026.5予定)。</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FINAL CTA -->
 <section class="final reveal" id="final">
   <div class="container final-inner">
     <div>
-      <span class="kicker">05 — インストール</span>
+      <span class="kicker">04 — インストール</span>
       <h2 class="section-title" style="margin-top:12px">まだ初期バージョンです。
 だからこそ、早く良くなります。</h2>
       <div class="final-body">
@@ -547,16 +518,6 @@
       document.querySelectorAll('.tab-panel').forEach(function(p){
         p.style.display = p.getAttribute('data-panel') === idx ? '' : 'none';
       });
-    });
-  });
-
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = this.parentElement;
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-      if(!isOpen) item.classList.add('open');
     });
   });
 

@@ -407,40 +407,11 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section reveal" id="faq">
-  <div class="container">
-    <header class="section-head">
-      <span class="kicker">04 — 수익 모델 & FAQ</span>
-      <h2 class="section-title">돈은 어떻게 버나요?
-짧게 답하면, 지금은 안 법니다.</h2>
-    </header>
-    <div class="faq-wrap">
-      <div class="faq-item open">
-        <button class="faq-q"><span>완전 무료라는 게 정말인가요?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">네. 카드 등록 페이지도 없고, '7일 무료 후 자동결제' 같은 꼼수도 없습니다. 앱 안에 결제 화면 자체가 없어요. 사용자 수 10,000명까지는 지금 구조 그대로 유지합니다.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>그럼 어떻게 유지되나요?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">만드는 사람 2명의 자비. 서버비가 월 34만 원대라 당분간은 버틸 수 있습니다. 이후엔 광고가 아닌 '선택형 구독(월 3,900원, 소설 완결작 조기 열람)' 모델을 검토 중입니다. 광고는 넣을 계획 없습니다.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>출처 커뮤니티 저작권은요?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">썰은 원문 링크·작성자 닉네임을 반드시 함께 노출합니다. 작성자 요청 시 24시간 안에 내립니다. 소설은 전부 자체 계약 작가의 오리지널이거나 정식 라이선스만 취급합니다.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>iOS / Android 둘 다 되나요?</span><span class="plus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">React Native 단일 코드베이스로 개발 중. Android는 Google Play에 출시되었습니다. iOS는 App Store 심사 대기 중 (2026.5 예정).</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FINAL CTA -->
 <section class="final reveal" id="final">
   <div class="container final-inner">
     <div>
-      <span class="kicker">05 — Install</span>
+      <span class="kicker">04 — Install</span>
       <h2 class="section-title" style="margin-top:12px">아직 초기 버전입니다.
 그래서 더 빨리 좋아져요.</h2>
       <div class="final-body">
@@ -547,16 +518,6 @@
       document.querySelectorAll('.tab-panel').forEach(function(p){
         p.style.display = p.getAttribute('data-panel') === idx ? '' : 'none';
       });
-    });
-  });
-
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = this.parentElement;
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-      if(!isOpen) item.classList.add('open');
     });
   });
 
