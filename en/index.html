@@ -36,9 +36,9 @@
       <a href="#testi">Reviews</a>
       <a href="#final">Get the app</a>
       <span class="nav-lang">
-        <a href="/">KO</a>
-        <a href="/en/">EN</a>
-        <a href="/ja/">JA</a>
+        <a href="/" class="">KO</a>
+        <a href="/en/" class="active">EN</a>
+        <a href="/ja/" class="">JA</a>
       </span>
     </div>
     <a href="#final" class="nav-cta">Get the app →</a>
@@ -566,8 +566,11 @@ That's why it gets better fast.</h2>
   var idx = 0, count = 3;
   function goTo(i){
     idx = ((i % count) + count) % count;
-    var card = track.querySelector('.testi-card');
-    var gap = 24;
+    var cards = track.querySelectorAll('.testi-card');
+    if(!cards.length) return;
+    var card = cards[0];
+    var style = getComputedStyle(track);
+    var gap = parseFloat(style.gap) || 24;
     var w = card.offsetWidth + gap;
     track.style.transform = 'translateX(-' + (idx * w) + 'px)';
     dots.forEach(function(d,j){ d.classList.toggle('active', j===idx); });
@@ -575,6 +578,7 @@ That's why it gets better fast.</h2>
   document.getElementById('testiPrev').addEventListener('click', function(){ goTo(idx-1); });
   document.getElementById('testiNext').addEventListener('click', function(){ goTo(idx+1); });
   dots.forEach(function(d){ d.addEventListener('click', function(){ goTo(+this.getAttribute('data-idx')); }); });
+  window.addEventListener('resize', function(){ goTo(idx); });
   setInterval(function(){ goTo(idx+1); }, 5000);
 
   // Theme toggle (from localStorage)

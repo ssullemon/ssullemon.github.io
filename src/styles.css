@@ -741,7 +741,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 
 /* ─── TESTIMONIALS ─── */
-.testi-wrap { position: relative; }
+.testi-wrap { position: relative; overflow: hidden; }
 .testi-track {
   display: flex;
   gap: 24px;
@@ -1074,31 +1074,88 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   :root { --gutter: 20px; }
+
+  /* Nav: hide text links, keep lang + CTA */
+  .nav-links > a { display: none; }
+  .nav-links { gap: 0; }
+  .nav-lang { border-left: none; padding-left: 0; }
+  .nav-cta { font-size: 12px; padding: 6px 12px; }
+
+  /* Hero */
   .hero { padding: 48px 0 32px; }
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .phone-stage { height: 520px; order: -1; }
   .phone { width: 260px; height: 520px; }
 
+  /* Sections */
   .section { padding: 72px 0; }
   .section-head { margin-bottom: 40px; }
   .problem-grid { grid-template-columns: 1fr; }
   .service-grid { grid-template-columns: 1fr; gap: 40px; }
   .service-phone { max-width: 280px; }
-  .final-inner { grid-template-columns: 1fr; gap: 48px; }
-  .final { padding: 80px 0; }
-  .hero-store-wrap { flex-direction: column; }
-  .hero-store-wrap .store-badge { width: 100%; max-width: 260px; justify-content: center; }
-  .store-buttons { flex-direction: column; }
-  .store-buttons .store-badge { width: 100%; max-width: 260px; justify-content: center; }
+
+  /* Tabs: scroll horizontally if needed */
+  .tabs { display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+  .tab { flex: none; font-size: 13px; padding: 8px 14px; }
+
+  /* Testimonials: full-width cards on mobile */
   .testi-card { flex: 0 0 calc(100% - 40px); min-height: auto; }
 
-  .nav-links { display: none; }
+  /* Final CTA */
+  .final-inner { grid-template-columns: 1fr; gap: 48px; }
+  .final { padding: 80px 0; }
+
+  /* Store badges */
+  .hero-store-wrap { flex-direction: column; }
+  .hero-store-wrap .store-badge { width: 100%; max-width: 300px; justify-content: center; }
+  .store-buttons { flex-direction: column; }
+  .store-buttons .store-badge { width: 100%; max-width: 300px; justify-content: center; }
+
+  /* Maker note */
+  .maker-note { flex-direction: column; text-align: center; }
+
+  /* Tweaks */
   .tweaks { left: 12px; right: 12px; width: auto; bottom: 12px; }
 }
 
 @media (max-width: 600px) {
-  .hero h1 { font-size: 42px; }
-  .float-card { font-size: 11px; padding: 10px 12px; }
-  .float-a { left: -8px; }
-  .float-b { right: -4px; }
+  .hero h1 { font-size: 36px; }
+  .section-title { font-size: 26px; }
+
+  /* Phone mockup: scale down */
+  .phone-stage { height: 440px; }
+  .phone { width: 220px; height: 440px; border-radius: 36px; padding: 10px; }
+  .phone-screen { border-radius: 28px; }
+  .phone-notch { width: 72px; height: 20px; top: 6px; }
+  .float-card { font-size: 10px; padding: 8px 10px; border-radius: 10px; }
+  .float-a { left: -4px; top: 30px; }
+  .float-b { right: -4px; top: 200px; }
+  .float-c { bottom: 50px; left: 0; }
+
+  /* Problem cards: more compact */
+  .problem-card { padding: 28px 20px 24px; }
+  .problem-card .p-stat { font-size: 36px; }
+  .problem-card .p-title { font-size: 18px; }
+
+  /* FAQ: smaller text */
+  .faq-q { font-size: 16px; padding: 18px 0; }
+
+  /* Footer */
+  .footer { flex-direction: column; text-align: center; gap: 8px; }
+
+  /* Service phone inside tabs */
+  .service-phone { max-width: 240px; border-radius: 36px; padding: 10px; }
+  .service-phone .phone-screen { border-radius: 28px; }
+
+  /* Store badges: full width */
+  .hero-store-wrap .store-badge,
+  .store-buttons .store-badge { max-width: 100%; }
+
+  /* QR block: hide on very small screens */
+  .qr-block { display: none; }
+
+  /* Nav: tighter */
+  .nav-inner { padding: 10px var(--gutter); }
+  .logo { font-size: 16px; gap: 6px; }
+  .logo-badge { display: none; }
 }
