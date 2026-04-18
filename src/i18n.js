@@ -1,4 +1,4 @@
-// Language strings for ssullemmon landing page
+// Language strings for ssullemon landing page
 // Strings are intentionally verbose so the copy stays in sync with the brief.
 
 window.I18N = {
@@ -155,10 +155,10 @@ window.I18N = {
     btnStatusAndroid: "지금 다운로드",
 
     finalFoot: "완전 무료. 가입 없이 바로 시작.",
-    finalFootSub: "문의: hello@ssullemmon.app",
+    finalFootSub: "문의: hello@ssullemon.app",
 
     // FOOTER
-    footerTag: "ssullemmon — 조용히 읽기 좋은 것들.",
+    footerTag: "ssullemon — 조용히 읽기 좋은 것들.",
     footerMade: "Made by 2 people in Seoul · © 2026",
 
     // Tweaks
@@ -195,7 +195,7 @@ window.I18N = {
 
     problemKicker: "01 — Problem",
     problemTitle: "You're putting up with a lot\njust to read one good post.",
-    problemSub: "Survey of 172 office workers, Nov 2025 (ssullemmon beta research).",
+    problemSub: "Survey of 172 office workers, Nov 2025 (ssullemon beta research).",
 
     p1Emoji: "🔄",
     p1Title: "You jump through 5 communities",
@@ -311,9 +311,9 @@ window.I18N = {
     btnStatusAndroid: "Download now",
 
     finalFoot: "Completely free. Start without signing up.",
-    finalFootSub: "Contact: hello@ssullemmon.app",
+    finalFootSub: "Contact: hello@ssullemon.app",
 
-    footerTag: "ssullemmon — quiet things worth reading.",
+    footerTag: "ssullemon — quiet things worth reading.",
     footerMade: "Made by 2 people in Seoul · © 2026",
 
     tweaksTitle: "Tweaks",
@@ -349,7 +349,7 @@ window.I18N = {
 
     problemKicker: "01 — Problem",
     problemTitle: "一本のネタのために、\nずいぶん我慢していませんか。",
-    problemSub: "会社員172名のアンケート (2025.11, ssullemmonベータ調査)。",
+    problemSub: "会社員172名のアンケート (2025.11, ssullemonベータ調査)。",
 
     p1Emoji: "🔄",
     p1Title: "5つのコミュを巡回",
@@ -465,9 +465,9 @@ window.I18N = {
     btnStatusAndroid: "今すぐダウンロード",
 
     finalFoot: "完全無料。登録なしで開始。",
-    finalFootSub: "お問い合わせ: hello@ssullemmon.app",
+    finalFootSub: "お問い合わせ: hello@ssullemon.app",
 
-    footerTag: "ssullemmon — 静かに読むのに良いもの。",
+    footerTag: "ssullemon — 静かに読むのに良いもの。",
     footerMade: "Made by 2 people in Seoul · © 2026",
 
     tweaksTitle: "Tweaks",
