@@ -1,4 +1,3 @@
-// Page event tracker — Supabase
 (function () {
   var SUPABASE_URL = 'https://iswwjhrmswcxbpctgzyj.supabase.co';
   var SUPABASE_KEY = 'sb_publishable_m5c_aT_bw-HECc__kgkeqQ_V0-MOtLH';
@@ -25,14 +24,11 @@
 
   waitForSupabase(function () {
     window.__sbTracker = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
-    // 페이지 방문 (세션당 1회)
-    if (!sessionStorage.getItem('_kp_visited')) {
+    if (!sessionStorage.getItem('_kc_visited')) {
       track('page_visit');
-      sessionStorage.setItem('_kp_visited', '1');
+      sessionStorage.setItem('_kc_visited', '1');
     }
   });
 
-  // 글로벌 함수로 노출
   window.trackEvent = track;
 })();

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAFAF9"/>
+      <stop offset="100%" stop-color="#E0E4FF"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5B6CFF"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.6">
+      <stop offset="0%" stop-color="#5B6CFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#5B6CFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(100, 200)">
+    <rect x="0" y="0" width="110" height="110" rx="28" fill="url(#mark)"/>
+    <path d="M35 28v54M35 55l27-27M35 55l27 27" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="240" y="280" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="64" font-weight="700" fill="#0A0A0A" letter-spacing="-2">ssullemon</text>
+  <text x="240" y="340" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="36" font-weight="500" fill="#71717A" letter-spacing="-1">All of Korea, in your language.</text>
+  <g transform="translate(100, 460)">
+    <circle cx="14" cy="14" r="4" fill="#5B6CFF"/>
+    <text x="30" y="20" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#27272A">55+ Languages</text>
+    <circle cx="214" cy="14" r="4" fill="#5B6CFF"/>
+    <text x="230" y="20" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#27272A">30+ Communities</text>
+    <circle cx="444" cy="14" r="4" fill="#5B6CFF"/>
+    <text x="460" y="20" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#27272A">18+ Modes</text>
+  </g>
+</svg>

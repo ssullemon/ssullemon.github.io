@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ssullemon — 静かに読むのに良いもの。</title>
-<meta name="description" content="DC・FMKorea・theqoo・instizから毎朝クロール。 「ちょっとだけ際どい」話だけを1日30〜50本。" />
+<title>ssullemon — 韓国のすべてを、あなたの言葉で</title>
+<meta name="description" content="K-POP、K-ドラマ、グルメ、旅行、ゲーム、占い — 韓国のすべてを一つのアプリで。AIがあなたの言語に即時翻訳します。" />
 
 <link rel="canonical" href="https://www.ssullemon.com/ja/" />
 <link rel="alternate" hreflang="ko" href="https://www.ssullemon.com/" />
@@ -12,540 +12,806 @@
 <link rel="alternate" hreflang="ja" href="https://www.ssullemon.com/ja/" />
 <link rel="alternate" hreflang="x-default" href="https://www.ssullemon.com/" />
 
+<meta property="og:title" content="ssullemon — 韓国のすべてを、あなたの言葉で" />
+<meta property="og:description" content="K-POP、K-ドラマ、グルメ、旅行、ゲーム、占い — 韓国のすべてを一つのアプリで。AIがあなたの言語に即時翻訳します。" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.ssullemon.com/ja/" />
+<meta property="og:locale" content="ja" />
+<meta property="og:site_name" content="ssullemon" />
+<meta property="og:image" content="https://www.ssullemon.com/og-image.svg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ssullemon — 韓国のすべてを、あなたの言葉で" />
+<meta name="twitter:description" content="K-POP、K-ドラマ、グルメ、旅行、ゲーム、占い — 韓国のすべてを一つのアプリで。AIがあなたの言語に即時翻訳します。" />
+<meta name="twitter:image" content="https://www.ssullemon.com/og-image.svg" />
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="apple-touch-icon" href="../favicon.svg" />
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../src/styles.css" />
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ssullemon.com/#org",
+      "name": "ssullemon",
+      "url": "https://www.ssullemon.com/",
+      "logo": "https://www.ssullemon.com/og-image.svg",
+      "email": "hello@ssullemon.app"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ssullemon.com/#website",
+      "url": "https://www.ssullemon.com/",
+      "name": "ssullemon",
+      "description": "K-POP、K-ドラマ、グルメ、旅行、ゲーム、占い — 韓国のすべてを一つのアプリで。AIがあなたの言語に即時翻訳します。",
+      "inLanguage": "ja",
+      "publisher": { "@id": "https://www.ssullemon.com/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "ssullemon",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "SocialNetworkingApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "124"
+      },
+      "downloadUrl": "https://play.google.com/store/apps/details?id=io.github.gptinfo.app",
+      "url": "https://www.ssullemon.com/ja/"
+    }
+  ]
+}
+</script>
+
+
 </head>
 <body>
-<div id="top">
 
-<!-- NAV -->
+<div class="glow-layer" aria-hidden="true"></div>
+
+<!-- ═══ NAV ═══ -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="logo" href="#top">
-      <span class="logo-dot"></span>
+    <a class="nav-brand" href="#top">
+      <span class="nav-brand-mark">K</span>
       <span>ssullemon</span>
-      <span class="logo-badge">BETA v0.3.1</span>
     </a>
     <div class="nav-links">
-      <a href="#services">機能</a>
-      <a href="#testi">レビュー</a>
-      <a href="#final">アプリを入手</a>
-      <span class="nav-lang">
-        <a href="/" class="">KO</a>
-        <a href="/en/" class="">EN</a>
-        <a href="/ja/" class="active">JA</a>
-      </span>
+      <a class="nav-link" href="#features">機能</a>
+      <a class="nav-link" href="#modes">モード</a>
+      <a class="nav-link" href="#languages">言語</a>
+
+      <div class="lang-picker">
+        <button class="lang-btn" type="button">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M1.5 7h11M7 1.5a8 8 0 010 11M7 1.5a8 8 0 000 11" stroke="currentColor" stroke-width="1.3" fill="none"/>
+          </svg>
+          <span>日本語</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="lang-menu" role="menu">
+          <a href="/" class="" role="menuitem">
+            <span class="lang-flag">🇰🇷</span>
+            <span class="lang-name">한국어</span>
+            <span class="lang-dot" style="display:none"></span>
+          </a>
+          <a href="/en/" class="" role="menuitem">
+            <span class="lang-flag">🇺🇸</span>
+            <span class="lang-name">English</span>
+            <span class="lang-dot" style="display:none"></span>
+          </a>
+          <a href="/ja/" class="active" role="menuitem">
+            <span class="lang-flag">🇯🇵</span>
+            <span class="lang-name">日本語</span>
+            <span class="lang-dot" style=""></span>
+          </a>
+        </div>
+      </div>
+
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">
+        <svg class="sun" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="2.8" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+            <path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.5 2.5l1 1M10.5 10.5l1 1M2.5 11.5l1-1M10.5 3.5l1-1"/>
+          </g>
+        </svg>
+        <svg class="moon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M11.5 8.5a5 5 0 01-6-6 5 5 0 106 6z" fill="currentColor"/>
+        </svg>
+      </button>
+
+      <a class="nav-cta" href="#download">アプリを入手</a>
     </div>
-    <a href="#final" class="nav-cta">アプリを入手 →</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="top">
+  <div class="hero-grid">
     <div>
-      <div class="hero-kicker">
-        <span class="pulse"></span>
-        <span>Android リリース済み · iOS 準備中</span>
-      </div>
-      <h1>
-        通勤中に読めるネタを、<br/>
-        <span class="accent-underline">ひとつのアプリに。</span>
+      <a href="#features" class="hero-pill">
+        <span class="hero-pill-badge">NEW</span>
+        <span class="hero-pill-eyebrow">55+言語 · 30+コミュニティ · 18+モード</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <h1 class="hero-title">
+        韓国のすべてを、<br/>
+        <span class="hero-title-accent">あなたの言葉で。</span>
       </h1>
-      <div class="hero-sub">
-        <p>DC・FMKorea・theqoo・instizから毎朝クロール。</p>
-        <p><span class="emph">「ちょっとだけ際どい」話だけを1日30〜50本。</span></p>
-        <p style="margin-top:12px">5つのコミュを巡る時間が、地下鉄2駅ぶんに。</p>
-      </div>
 
-      <div class="hero-store-wrap">
-        <a class="store-badge google" href="https://play.google.com/store/apps/details?id=io.github.gptinfo.app" target="_blank" rel="noopener noreferrer">
-          <svg class="store-badge-icon" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734c0-.382.218-.72.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zM19.32 11.2l2.48 1.44c.48.28.48.72 0 1l-2.48 1.44-2.666-2.666L19.32 11.2zM5.864 3.471L16.8 9.804l-2.302 2.302L5.864 3.471z"/></svg>
-          <span class="store-badge-text">
-            <small>GET IT ON</small>
+      <p class="hero-sub">K-POP、K-ドラマ、グルメ、旅行、ゲーム、占い — 韓国のすべてを一つのアプリで。AIがあなたの言語に即時翻訳します。</p>
+
+      <div class="hero-ctas">
+        <a class="hero-cta hero-cta-primary" href="https://play.google.com/store/apps/details?id=io.github.gptinfo.app" target="_blank" rel="noopener" onclick="if(window.trackEvent)trackEvent('click_play_store_hero')">
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="none" aria-hidden="true">
+            <path d="M1.5 1.3L11 9 1.5 16.7V1.3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+            <path d="M11 9l4 2.3M11 9l4-2.3M1.5 1.3L11 9M1.5 16.7L11 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="hero-cta-text">
+            <small>ダウンロード</small>
             <b>Google Play</b>
           </span>
         </a>
-        <div class="store-badge apple disabled">
-          <svg class="store-badge-icon" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <span class="store-badge-text">
-            <small>リリース準備中</small>
+        <div class="hero-cta hero-cta-secondary" aria-disabled="true" title="Coming soon">
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="none" aria-hidden="true">
+            <path d="M11 5c.3-1.4 1.5-2.3 2.5-2.3-.2 1.2-.9 2.3-2.5 2.3zM8 5c-1.5 0-3 1-3 3.5 0 2.8 2 6.5 3.5 6.5.6 0 1-.3 1.5-.3s.9.3 1.5.3c1.5 0 3.5-3.7 3.5-6.5 0-2.5-1.5-3.5-3-3.5-.7 0-1.5.4-2 .4s-1.3-.4-2-.4z" fill="currentColor"/>
+          </svg>
+          <span class="hero-cta-text">
+            <small>近日公開</small>
             <b>App Store</b>
           </span>
         </div>
       </div>
 
-      <div class="hero-chips">
-        <span class="hero-chip">✓ 登録不要</span>
-        <span class="hero-chip">✓ 読書を邪魔する広告なし</span>
-        <span class="hero-chip">✓ 決済画面そのものが無い</span>
+      <div class="hero-proof">
+        <div class="avatar-row">
+          <div style="background:#5B6CFF">A</div>
+          <div style="background:#3B82F6">K</div>
+          <div style="background:#10B981">M</div>
+          <div style="background:#F59E0B">J</div>
+          <div style="background:#8B5CF6">R</div>
+        </div>
+        <div class="proof-text">
+          <div class="proof-stars">
+            <svg width="11" height="11" viewBox="0 0 12 12"><path d="M6 0l1.8 3.8L12 4.5l-3 3L9.7 12 6 10 2.3 12 3 7.5l-3-3L4.2 3.8z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 12 12"><path d="M6 0l1.8 3.8L12 4.5l-3 3L9.7 12 6 10 2.3 12 3 7.5l-3-3L4.2 3.8z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 12 12"><path d="M6 0l1.8 3.8L12 4.5l-3 3L9.7 12 6 10 2.3 12 3 7.5l-3-3L4.2 3.8z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 12 12"><path d="M6 0l1.8 3.8L12 4.5l-3 3L9.7 12 6 10 2.3 12 3 7.5l-3-3L4.2 3.8z"/></svg>
+            <svg width="11" height="11" viewBox="0 0 12 12"><path d="M6 0l1.8 3.8L12 4.5l-3 3L9.7 12 6 10 2.3 12 3 7.5l-3-3L4.2 3.8z"/></svg>
+            <span class="proof-rating">4.9</span>
+          </div>
+          <div><b class="proof-count">12,400+</b> 人が今週、韓国を発見中</div>
+        </div>
       </div>
     </div>
 
-    <!-- Phone mockup -->
+    <!-- Phone showcase -->
     <div class="phone-stage">
-      <div class="strap-rail" style="top:20px"></div>
-      <div class="strap" style="left:20%;top:20px"></div>
-      <div class="strap" style="left:60%;top:20px"></div>
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="app-bar">
-            <div>
-              <div class="app-title">오늘의 썰</div>
-              <div class="app-meta">今朝04:12に更新 · 34本 更新</div>
+      <div class="phone-stage-glow"></div>
+
+      <!-- Back phone (static, uses Music screen) -->
+      <div class="phone-back">
+        <div class="ios-device size-300">
+          <div class="ios-island"></div>
+          <div class="ios-status"><span>9:41</span><span class="ios-status-icons">●●●</span></div>
+          <div class="ios-screen">
+            <h3>K-POP</h3>
+            <div class="screen-sub">今週のトレンド</div>
+            <div class="sc-album">
+              <div class="sc-album-ring1"></div>
+              <div class="sc-album-ring2"></div>
+              <div class="sc-album-play"></div>
+              <div class="sc-album-info">
+                <small>再生中</small>
+                <b>Supernova</b>
+                <span>aespa · Armageddon</span>
+              </div>
+            </div>
+            <div class="sc-progress"><div></div></div>
+            <div class="sc-times"><span>1:14</span><span>3:18</span></div>
+          </div>
+          <div class="ios-home"></div>
+        </div>
+      </div>
+
+      <!-- Front phone (auto-rotating) -->
+      <div class="phone-front">
+        <div class="ios-device size-320">
+          <div class="ios-island"></div>
+          <div class="ios-status"><span>9:41</span><span class="ios-status-icons">●●●</span></div>
+
+          <!-- Screen 1: Community -->
+          <div class="ios-screen phone-screen-slot">
+            <div class="sc-screen-header">
+              <h3>コミュニティ</h3>
+              <div class="sc-ai-badge">● AI JA</div>
+            </div>
+            <div class="screen-sub">リアルタイム翻訳</div>
+            <div class="dancheong">
+              <span style="background:#5B6CFF"></span>
+              <span style="background:#3B82F6"></span>
+              <span style="background:#10B981"></span>
+              <span style="background:#F59E0B"></span>
+              <span style="background:#5B6CFF"></span>
+              <span style="background:#3B82F6"></span>
+            </div>
+            <div class="sc-posts">
+              <div class="sc-post">
+                <div class="sc-post-head">
+                  <span class="sc-post-src">DCInside</span>
+                  <span class="sc-post-meta">3分前 · 1.2k</span>
+                </div>
+                <div class="sc-post-title">今日のaespaファンカム画質ヤバい</div>
+              </div>
+              <div class="sc-post">
+                <div class="sc-post-head">
+                  <span class="sc-post-src">theqoo</span>
+                  <span class="sc-post-meta">11分 · 892</span>
+                </div>
+                <div class="sc-post-title">ハン・ガンのノーベル賞後の海外反応</div>
+              </div>
+              <div class="sc-post">
+                <div class="sc-post-head">
+                  <span class="sc-post-src">FMKorea</span>
+                  <span class="sc-post-meta">26分 · 441</span>
+                </div>
+                <div class="sc-post-title">韓国大学街ホットスポットTOP10</div>
+              </div>
             </div>
           </div>
-          <div class="app-feed">
-            <div class="feed-card blurred">
-              <div class="fc-tag">DC · 실시간</div>
-              <div class="fc-title">소개팅에서 5분 만에 정체 들킨 이유가…</div>
-              <div class="fc-thumb"><div class="mosaic"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-              <div class="fc-meta"><span>원문 · 디시</span><span>·</span><span>3분 읽기</span></div>
+
+          <!-- Screen 2: Music -->
+          <div class="ios-screen phone-screen-slot" style="display:none">
+            <h3>K-POP</h3>
+            <div class="screen-sub">今週のトレンド</div>
+            <div class="sc-album">
+              <div class="sc-album-ring1"></div>
+              <div class="sc-album-ring2"></div>
+              <div class="sc-album-play"></div>
+              <div class="sc-album-info">
+                <small>再生中</small>
+                <b>Supernova</b>
+                <span>aespa · Armageddon</span>
+              </div>
             </div>
-            <div class="feed-card">
-              <div class="fc-tag">더쿠 · 연애</div>
-              <div class="fc-title">남친이 몰래 내 일기 읽고 남긴 반응</div>
-              <div class="fc-meta"><span>원문 · 디시</span><span>·</span><span>3분 읽기</span></div>
+            <div class="sc-progress"><div></div></div>
+            <div class="sc-times"><span>1:14</span><span>3:18</span></div>
+            <div class="sc-chart">
+              <div class="sc-chart-num">2</div>
+              <div class="sc-chart-art"></div>
+              <div class="sc-chart-name">NewJeans — ETA</div>
+              <div class="sc-chart-arrow">▸</div>
             </div>
-            <div class="feed-card blurred">
-              <div class="fc-tag">에펨 · 오피스</div>
-              <div class="fc-title">회식 끝나고 과장님이 보낸 카톡 한 줄</div>
-              <div class="fc-thumb"><div class="mosaic"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-              <div class="fc-meta"><span>원문 · 디시</span><span>·</span><span>3분 읽기</span></div>
+            <div class="sc-chart">
+              <div class="sc-chart-num">3</div>
+              <div class="sc-chart-art" style="background:linear-gradient(135deg,#10B981,#111)"></div>
+              <div class="sc-chart-name">IVE — Baddie</div>
+              <div class="sc-chart-arrow">▸</div>
             </div>
           </div>
+
+          <!-- Screen 3: Food -->
+          <div class="ios-screen phone-screen-slot" style="display:none">
+            <h3>グルメ</h3>
+            <div class="screen-sub">弘大近く · 8店</div>
+            <div class="sc-map">
+              <div class="sc-map-pin" style="left:22%;top:35%;background:#5B6CFF"><span>₩</span></div>
+              <div class="sc-map-pin" style="left:58%;top:24%;background:#3B82F6"><span>★</span></div>
+              <div class="sc-map-pin" style="left:72%;top:58%;background:#10B981"><span>₩₩</span></div>
+              <div class="sc-map-pin" style="left:34%;top:70%;background:#F59E0B"><span>₩</span></div>
+              <div class="sc-map-you"></div>
+            </div>
+            <div class="sc-spot">
+              <div class="sc-spot-thumb"></div>
+              <div style="flex:1">
+                <div class="sc-spot-name">光化門ミジン</div>
+                <div class="sc-spot-meta">★ 4.8 · そば · 280m</div>
+              </div>
+              <div class="sc-spot-open">営業中</div>
+            </div>
+            <div class="sc-spot">
+              <div class="sc-spot-thumb"></div>
+              <div style="flex:1">
+                <div class="sc-spot-name">乙支路老舗</div>
+                <div class="sc-spot-meta">★ 4.6 · BBQ · 540m</div>
+              </div>
+              <div class="sc-spot-open">営業中</div>
+            </div>
+          </div>
+
+          <!-- Screen 4: Modes -->
+          <div class="ios-screen phone-screen-slot" style="display:none">
+            <h3>モード</h3>
+            <div class="screen-sub">タップで切り替え · 18モード</div>
+            <div class="sc-modes">
+              <div class="sc-mode active"><div class="sc-mode-icon">💬</div><div class="sc-mode-name">Community</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">🎵</div><div class="sc-mode-name">K-POP</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">🍚</div><div class="sc-mode-name">Food</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">✈️</div><div class="sc-mode-name">Travel</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">🎮</div><div class="sc-mode-name">Games</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">🔮</div><div class="sc-mode-name">Fortune</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">🎬</div><div class="sc-mode-name">Celebrity</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">👶</div><div class="sc-mode-name">Kids</div></div>
+              <div class="sc-mode"><div class="sc-mode-icon">🧠</div><div class="sc-mode-name">MBTI</div></div>
+            </div>
+          </div>
+
+          <!-- Screen 5: Fortune -->
+          <div class="ios-screen phone-screen-slot" style="display:none">
+            <h3>占い</h3>
+            <div class="screen-sub">今日 · 4月18日</div>
+            <div class="sc-fortune-hero">
+              <div class="sc-fortune-moon"></div>
+              <div class="sc-fortune-label">四柱 · 사주</div>
+              <div class="sc-fortune-msg">話すより聴くのに良い日。</div>
+              <div class="sc-fortune-scores">
+                <div>★ 運 <b>87</b></div>
+                <div>♥ 恋愛 <b>62</b></div>
+                <div>$ 財運 <b>71</b></div>
+              </div>
+            </div>
+            <div class="sc-fortune-grid">
+              <div class="sc-fortune-card" style="border-left-color:#5B6CFF">
+                <div class="sc-fortune-card-t">手相</div>
+                <div class="sc-fortune-card-s">手をスキャン</div>
+              </div>
+              <div class="sc-fortune-card" style="border-left-color:#3B82F6">
+                <div class="sc-fortune-card-t">人相</div>
+                <div class="sc-fortune-card-s">AI分析</div>
+              </div>
+              <div class="sc-fortune-card" style="border-left-color:#10B981">
+                <div class="sc-fortune-card-t">MBTI</div>
+                <div class="sc-fortune-card-s">12クイズ</div>
+              </div>
+              <div class="sc-fortune-card" style="border-left-color:#F59E0B">
+                <div class="sc-fortune-card-t">タロット</div>
+                <div class="sc-fortune-card-s">今日のカード</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ios-home"></div>
         </div>
       </div>
-      <div class="float-card float-a">
-        <span class="dot-accent"></span>
-        <div>
-          <div style="font-weight:700">34本 更新</div>
-          <div class="mono">今朝04:12に更新</div>
-        </div>
-      </div>
-      <div class="float-card float-b">
-        <div style="width:28px;height:28px;border-radius:6px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:14px">📖</div>
-        <div>
-          <div style="font-weight:700">3話 · 2,486字</div>
-          <div class="mono">5分22秒 読書中</div>
-        </div>
-      </div>
-      <div class="float-card float-c">
-        <span style="font-size:16px">🔒</span>
-        <div>
-          <div style="font-weight:700;font-size:11px;font-family:var(--ff-mono);color:var(--accent);letter-spacing:0.06em">BLURRED</div>
-          <div class="mono" style="font-size:10px">공공장소 모드 ON</div>
-        </div>
+
+      <div class="phone-dots" role="tablist">
+        <button class="active" aria-label="Screen 1"></button>
+        <button aria-label="Screen 2"></button>
+        <button aria-label="Screen 3"></button>
+        <button aria-label="Screen 4"></button>
+        <button aria-label="Screen 5"></button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker">
-  <span class="ticker-label">現在クロール中のコミュニティ ──────</span>
-  <div class="ticker-track">
-    <div class="ticker-item"><span class="dot"></span><span>dcinside</span><span class="ts">04:02</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>fmkorea</span><span class="ts">04:08</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>theqoo</span><span class="ts">04:14</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>instiz</span><span class="ts">04:19</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>ppomppu</span><span class="ts">04:26</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>nate pann</span><span class="ts">04:33</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>ruliweb</span><span class="ts">04:41</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>bobae</span><span class="ts">04:48</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>dcinside</span><span class="ts">04:02</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>fmkorea</span><span class="ts">04:08</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>theqoo</span><span class="ts">04:14</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>instiz</span><span class="ts">04:19</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>ppomppu</span><span class="ts">04:26</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>nate pann</span><span class="ts">04:33</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>ruliweb</span><span class="ts">04:41</span></div>
-    <div class="ticker-item"><span class="dot"></span><span>bobae</span><span class="ts">04:48</span></div>
+<!-- ═══ TRUST BAR ═══ -->
+<section class="trust-bar">
+  <div class="trust-label">55+言語でリアルタイム翻訳</div>
+  <div class="trust-track">
+    <span>한국어<span class="trust-dot"></span>English<span class="trust-dot"></span>日本語<span class="trust-dot"></span>中文<span class="trust-dot"></span>Español<span class="trust-dot"></span>Tiếng Việt<span class="trust-dot"></span>Français<span class="trust-dot"></span>Bahasa<span class="trust-dot"></span>Deutsch<span class="trust-dot"></span>Italiano<span class="trust-dot"></span>Português<span class="trust-dot"></span>Русский<span class="trust-dot"></span>Türkçe<span class="trust-dot"></span>العربية<span class="trust-dot"></span>हिन्दी<span class="trust-dot"></span>ไทย<span class="trust-dot"></span>Polski<span class="trust-dot"></span>Nederlands<span class="trust-dot"></span></span>
+    <span>한국어<span class="trust-dot"></span>English<span class="trust-dot"></span>日本語<span class="trust-dot"></span>中文<span class="trust-dot"></span>Español<span class="trust-dot"></span>Tiếng Việt<span class="trust-dot"></span>Français<span class="trust-dot"></span>Bahasa<span class="trust-dot"></span>Deutsch<span class="trust-dot"></span>Italiano<span class="trust-dot"></span>Português<span class="trust-dot"></span>Русский<span class="trust-dot"></span>Türkçe<span class="trust-dot"></span>العربية<span class="trust-dot"></span>हिन्दी<span class="trust-dot"></span>ไทย<span class="trust-dot"></span>Polski<span class="trust-dot"></span>Nederlands<span class="trust-dot"></span></span>
+    <span>한국어<span class="trust-dot"></span>English<span class="trust-dot"></span>日本語<span class="trust-dot"></span>中文<span class="trust-dot"></span>Español<span class="trust-dot"></span>Tiếng Việt<span class="trust-dot"></span>Français<span class="trust-dot"></span>Bahasa<span class="trust-dot"></span>Deutsch<span class="trust-dot"></span>Italiano<span class="trust-dot"></span>Português<span class="trust-dot"></span>Русский<span class="trust-dot"></span>Türkçe<span class="trust-dot"></span>العربية<span class="trust-dot"></span>हिन्दी<span class="trust-dot"></span>ไทย<span class="trust-dot"></span>Polski<span class="trust-dot"></span>Nederlands<span class="trust-dot"></span></span>
   </div>
-</div>
+</section>
 
-<!-- PROBLEM -->
-<section class="section reveal" id="problem">
+<!-- ═══ FEATURES (bento) ═══ -->
+<section class="features" id="features">
+  <div class="section-header">
+    <div class="section-kicker">機能 · FEATURES</div>
+    <h2 class="section-title">韓国文化のすべてを <em>一つのアプリに。</em></h2>
+  </div>
+  <div class="bento">
+    <div class="feature-card hero span-4">
+      <div class="feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">リアルタイム・コミュニティ</div>
+        <p class="feature-desc">DCInside、theqoo、FMKorea、Nate Pannなど30+の韓国コミュニティをAI翻訳で。</p>
+      </div>
+    </div>
+    <div class="feature-card span-2">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M10 8l5 3-5 3V8z" fill="currentColor"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">YouTube Shorts</div>
+        <p class="feature-desc">トレンドのK-POP・K-ドラマ・セレブショートを自動翻訳字幕で。</p>
+      </div>
+    </div>
+    <div class="feature-card span-2">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">グルメ & レストラン</div>
+        <p class="feature-desc">近くのお店を地図で — ミシュラン、コスパ、レシピ、デリバリーも。</p>
+      </div>
+    </div>
+    <div class="feature-card span-2">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l18-9-4 18-4-8-10-1z"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">旅行 & スポット</div>
+        <p class="feature-desc">ローカル情報、道案内、観光地を超えた隠れ名所。</p>
+      </div>
+    </div>
+    <div class="feature-card span-2">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">K-POPミュージック</div>
+        <p class="feature-desc">フローティングプレイヤー、アーティスト別チャート、今週のトレンド。</p>
+      </div>
+    </div>
+    <div class="feature-card span-3">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">ゲーム & クイズ</div>
+        <p class="feature-desc">しりとり、ことわざクイズ、地理クイズ、パズル。</p>
+      </div>
+    </div>
+    <div class="feature-card span-3">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 010 18M12 3a15 15 0 000 18M3 12h18"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">占い & 四柱</div>
+        <p class="feature-desc">手相、人相、MBTI、タロット — 本気でも、遊びでも。</p>
+      </div>
+    </div>
+    <div class="feature-card span-2">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a3 3 0 016 0v5"/><rect x="5" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">キッズコンテンツ</div>
+        <p class="feature-desc">ハングル学習、ぬりえ、算数、動物クイズ、一緒に歌おう。</p>
+      </div>
+    </div>
+    <div class="feature-card wide span-4">
+      <div class="feature-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-6 10 6-10 6z"/><path d="M6 12v5a6 6 0 0012 0v-5"/></svg>
+      </div>
+      <div class="feature-body">
+        <div class="feature-title">大学検索</div>
+        <p class="feature-desc">韓国の大学190+ — 地図、ランキング、入学情報。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SHOWCASE (4 phones) ═══ -->
+<section class="showcase">
   <div class="container">
-    <header class="section-head">
-      <span class="kicker">01 — Problem</span>
-      <h2 class="section-title">一本のネタのために、
-ずいぶん我慢していませんか。</h2>
-      <p class="section-sub">会社員172名のアンケート (2025.11, ssullemonベータ調査)。</p>
-    </header>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="p-emoji">🔄</div>
-        <h3 class="p-title">5つのコミュを巡回</h3>
-        <p class="p-quote">「DC、FM、theqoo、instiz、またDC…」</p>
-        <div class="p-stat-row">
-          <span class="p-stat" data-countup="12 ~ 15">12 ~ 15</span>
-          <span class="p-stat-unit">分</span>
+    <div class="section-header">
+      <div class="section-kicker">アプリ · THE APP</div>
+      <h2 class="section-title">好奇心旺盛な探検家のための <em>丁寧に作られたプロダクト。</em></h2>
+    </div>
+  </div>
+  <div class="showcase-grid">
+    <div class="showcase-item">
+      <div class="showcase-phone-wrap">
+        <div class="ios-device size-260">
+          <div class="ios-island"></div>
+          <div class="ios-status"><span>9:41</span><span class="ios-status-icons">●●●</span></div>
+          <div class="ios-screen">
+            <div class="sc-screen-header">
+              <h3>コミュニティ</h3>
+              <div class="sc-ai-badge">● AI JA</div>
+            </div>
+            <div class="screen-sub">リアルタイム翻訳</div>
+            <div class="dancheong">
+              <span style="background:#5B6CFF"></span><span style="background:#3B82F6"></span><span style="background:#10B981"></span><span style="background:#F59E0B"></span><span style="background:#5B6CFF"></span><span style="background:#3B82F6"></span>
+            </div>
+            <div class="sc-posts">
+              <div class="sc-post">
+                <div class="sc-post-head"><span class="sc-post-src">DCInside</span><span class="sc-post-meta">3分前 · 1.2k</span></div>
+                <div class="sc-post-title">今日のaespaファンカム画質ヤバい</div>
+              </div>
+              <div class="sc-post">
+                <div class="sc-post-head"><span class="sc-post-src">theqoo</span><span class="sc-post-meta">11分 · 892</span></div>
+                <div class="sc-post-title">ハン・ガンのノーベル賞後の海外反応</div>
+              </div>
+            </div>
+          </div>
+          <div class="ios-home"></div>
         </div>
-        <div class="p-stat-desc">↳ ネタを1本見つけるまでの平均時間</div>
       </div>
-      <div class="problem-card">
-        <div class="p-emoji">🚫</div>
-        <h3 class="p-title">本文より広告のほうが大きい</h3>
-        <p class="p-quote">「少し休もうとしたら、ブロック・迂回・読み込み3分・ポップアップ7個。」</p>
-        <div class="p-stat-row">
-          <span class="p-stat" data-countup="40">40</span>
-          <span class="p-stat-unit">%+</span>
+      <div class="showcase-label">コミュ</div>
+    </div>
+
+    <div class="showcase-item">
+      <div class="showcase-phone-wrap">
+        <div class="ios-device size-260">
+          <div class="ios-island"></div>
+          <div class="ios-status"><span>9:41</span><span class="ios-status-icons">●●●</span></div>
+          <div class="ios-screen">
+            <h3>K-POP</h3>
+            <div class="screen-sub">今週のトレンド</div>
+            <div class="sc-album">
+              <div class="sc-album-ring1"></div>
+              <div class="sc-album-ring2"></div>
+              <div class="sc-album-play"></div>
+              <div class="sc-album-info">
+                <small>再生中</small>
+                <b>Supernova</b>
+                <span>aespa · Armageddon</span>
+              </div>
+            </div>
+            <div class="sc-progress"><div></div></div>
+            <div class="sc-times"><span>1:14</span><span>3:18</span></div>
+          </div>
+          <div class="ios-home"></div>
         </div>
-        <div class="p-stat-desc">↳ モバイル画面で広告が占める面積</div>
       </div>
-      <div class="problem-card">
-        <div class="p-emoji">📵</div>
-        <h3 class="p-title">電車で開くのが気まずい</h3>
-        <p class="p-quote">「隣の人が私のスマホを見ている気がする。」</p>
-        <div class="p-stat-row">
-          <span class="p-stat" data-countup="68">68</span>
-          <span class="p-stat-unit">%</span>
+      <div class="showcase-label">K-POP</div>
+    </div>
+
+    <div class="showcase-item">
+      <div class="showcase-phone-wrap">
+        <div class="ios-device size-260">
+          <div class="ios-island"></div>
+          <div class="ios-status"><span>9:41</span><span class="ios-status-icons">●●●</span></div>
+          <div class="ios-screen">
+            <h3>グルメ</h3>
+            <div class="screen-sub">弘大近く · 8店</div>
+            <div class="sc-map">
+              <div class="sc-map-pin" style="left:22%;top:35%;background:#5B6CFF"><span>₩</span></div>
+              <div class="sc-map-pin" style="left:58%;top:24%;background:#3B82F6"><span>★</span></div>
+              <div class="sc-map-pin" style="left:72%;top:58%;background:#10B981"><span>₩₩</span></div>
+              <div class="sc-map-you"></div>
+            </div>
+            <div class="sc-spot">
+              <div class="sc-spot-thumb"></div>
+              <div style="flex:1">
+                <div class="sc-spot-name">光化門ミジン</div>
+                <div class="sc-spot-meta">★ 4.8 · そば · 280m</div>
+              </div>
+              <div class="sc-spot-open">営業中</div>
+            </div>
+          </div>
+          <div class="ios-home"></div>
         </div>
-        <div class="p-stat-desc">↳ 公共の場でアプリを閉じた経験</div>
+      </div>
+      <div class="showcase-label">グルメ</div>
+    </div>
+
+    <div class="showcase-item">
+      <div class="showcase-phone-wrap">
+        <div class="ios-device size-260">
+          <div class="ios-island"></div>
+          <div class="ios-status"><span>9:41</span><span class="ios-status-icons">●●●</span></div>
+          <div class="ios-screen">
+            <h3>占い</h3>
+            <div class="screen-sub">今日 · 4月18日</div>
+            <div class="sc-fortune-hero">
+              <div class="sc-fortune-moon"></div>
+              <div class="sc-fortune-label">四柱 · 사주</div>
+              <div class="sc-fortune-msg">話すより聴くのに良い日。</div>
+            </div>
+            <div class="sc-fortune-grid">
+              <div class="sc-fortune-card" style="border-left-color:#5B6CFF">
+                <div class="sc-fortune-card-t">手相</div>
+                <div class="sc-fortune-card-s">手をスキャン</div>
+              </div>
+              <div class="sc-fortune-card" style="border-left-color:#3B82F6">
+                <div class="sc-fortune-card-t">人相</div>
+                <div class="sc-fortune-card-s">AI分析</div>
+              </div>
+            </div>
+          </div>
+          <div class="ios-home"></div>
+        </div>
+      </div>
+      <div class="showcase-label">占い</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MODES ═══ -->
+<section class="modes" id="modes">
+  <div class="section-header">
+    <div class="section-kicker">モード · MODES</div>
+    <h2 class="section-title">18+モード。 <em>気分で選ぼう。</em></h2>
+  </div>
+  <div class="modes-list">
+    <div class="mode-pill active">コミュニティ</div>
+    <div class="mode-pill">芸能人</div>
+    <div class="mode-pill">グルメ</div>
+    <div class="mode-pill">旅行</div>
+    <div class="mode-pill">Instagram</div>
+    <div class="mode-pill">レストラン</div>
+    <div class="mode-pill">K-POP</div>
+    <div class="mode-pill">競馬</div>
+    <div class="mode-pill">占い</div>
+    <div class="mode-pill">フードマッチ</div>
+    <div class="mode-pill">キッズ</div>
+    <div class="mode-pill">大学</div>
+    <div class="mode-pill">ゲーム</div>
+    <div class="mode-pill">MBTI</div>
+    <div class="mode-pill">健康</div>
+    <div class="mode-pill">話題</div>
+    <div class="mode-pill">天気</div>
+    <div class="mode-pill">ニュース</div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="stats" id="languages">
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-num">55+</div>
+      <div class="stat-label">言語</div>
+      <div class="stat-sub">即時AI翻訳</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">30+</div>
+      <div class="stat-label">コミュニティ</div>
+      <div class="stat-sub">DCInsideからtheqooまで</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">18+</div>
+      <div class="stat-label">アプリモード</div>
+      <div class="stat-sub">興味に合わせて</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">190+</div>
+      <div class="stat-label">大学</div>
+      <div class="stat-sub">地図・ランキング・入学</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="testi">
+  <div class="testi-grid">
+    <div class="testi-card">
+      <svg class="testi-quote-icon" width="20" height="16" viewBox="0 0 20 16" aria-hidden="true">
+        <path d="M0 16V8c0-4.4 3.6-8 8-8v4c-2.2 0-4 1.8-4 4v1h4v7H0zm12 0V8c0-4.4 3.6-8 8-8v4c-2.2 0-4 1.8-4 4v1h4v7h-8z"/>
+      </svg>
+      <div class="testi-text">リアルタイム翻訳でtheqooを読めるのが最高。</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#5B6CFF">A</div>
+        <div>
+          <div class="testi-name">Aria K.</div>
+          <div class="testi-role">Seoul</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <svg class="testi-quote-icon" width="20" height="16" viewBox="0 0 20 16" aria-hidden="true">
+        <path d="M0 16V8c0-4.4 3.6-8 8-8v4c-2.2 0-4 1.8-4 4v1h4v7H0zm12 0V8c0-4.4 3.6-8 8-8v4c-2.2 0-4 1.8-4 4v1h4v7h-8z"/>
+      </svg>
+      <div class="testi-text">グルメマップだけで3日間の旅を計画できた。</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#3B82F6">M</div>
+        <div>
+          <div class="testi-name">Marco D.</div>
+          <div class="testi-role">Lisbon</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <svg class="testi-quote-icon" width="20" height="16" viewBox="0 0 20 16" aria-hidden="true">
+        <path d="M0 16V8c0-4.4 3.6-8 8-8v4c-2.2 0-4 1.8-4 4v1h4v7H0zm12 0V8c0-4.4 3.6-8 8-8v4c-2.2 0-4 1.8-4 4v1h4v7h-8z"/>
+      </svg>
+      <div class="testi-text">K-POPプレイヤーがバックグラウンドで動くの最高。</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#10B981">Y</div>
+        <div>
+          <div class="testi-name">Yui T.</div>
+          <div class="testi-role">Tokyo</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section reveal" id="services">
-  <div class="container">
-    <header class="section-head">
-      <span class="kicker">02 — 機能</span>
-      <h2 class="section-title">今使えるもの、
-そしてこれから加わるもの。</h2>
-      <p class="section-sub">まだ無い機能は「準備中」と書いています。</p>
-    </header>
-
-    <div class="tabs" role="tablist">
-      <button role="tab" class="tab active" data-tab="0">
-        <span class="tab-emoji">📰</span><span>今日のネタ</span>
-      </button>
-      <button role="tab" class="tab" data-tab="1">
-        <span class="tab-emoji">📖</span><span>パンツ小説</span>
-      </button>
-      <button role="tab" class="tab" data-tab="2">
-        <span class="tab-emoji">🔜</span><span>AVキュレーション</span>
-        <span class="tab-badge">準備中</span>
-      </button>
-    </div>
-
-    <!-- Tab 0: Feed -->
-    <div class="service-grid tab-panel" data-panel="0">
-      <div class="service-left">
-        <h3 class="s-title">今日のネタ — 毎朝自動キュレーション</h3>
-        <p class="s-body">DC・FMKorea・theqoo・instizから反応の良い「ちょっと際どい」話を抽出、1日30〜50本。原文リンク付き。</p>
-        <ul class="s-bullets">
-          <li>AM4時クロール → AM7時フィード更新</li>
-          <li>1本あたり平均3分で読める</li>
-          <li>原文コミュ・原作者リンクを100%表示</li>
-        </ul>
-        <div class="s-cta">👉 地下鉄2駅ぶんで3本ほど読めます。</div>
-      </div>
-      <div>
-        <div class="service-phone">
-          <div class="phone-screen">
-            <div class="app-bar">
-              <div>
-                <div class="app-title">오늘의 썰</div>
-                <div class="app-meta">今朝04:12に更新 · 34本 更新</div>
-              </div>
-            </div>
-            <div class="app-feed">
-              <div class="feed-card blurred">
-                <div class="fc-tag">DC · 실시간</div>
-                <div class="fc-title">소개팅에서 5분 만에 정체 들킨 이유가…</div>
-                <div class="fc-thumb"><div class="mosaic"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-                <div class="fc-meta"><span>원문 · 디시</span><span>·</span><span>3분 읽기</span></div>
-              </div>
-              <div class="feed-card">
-                <div class="fc-tag">더쿠 · 연애</div>
-                <div class="fc-title">남친이 몰래 내 일기 읽고 남긴 반응</div>
-                <div class="fc-meta"><span>원문 · 디시</span><span>·</span><span>3분 읽기</span></div>
-              </div>
-              <div class="feed-card blurred">
-                <div class="fc-tag">에펨 · 오피스</div>
-                <div class="fc-title">회식 끝나고 과장님이 보낸 카톡 한 줄</div>
-                <div class="fc-thumb"><div class="mosaic"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-                <div class="fc-meta"><span>원문 · 디시</span><span>·</span><span>3분 읽기</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tab 1: Novel -->
-    <div class="service-grid tab-panel" data-panel="1" style="display:none">
-      <div class="service-left">
-        <h3 class="s-title">パンツ小説 — ロマンス7 : 緊張3</h3>
-        <p class="s-body">ハードは重いし普通の恋愛は物足りない、という人のための短編連載。完結作も連載作もあり、タグで絞り込み可能。</p>
-        <ul class="s-bullets">
-          <li>1話 約2,500字 (5〜6分)</li>
-          <li>連載14作 · 完結22作</li>
-          <li>タグ32種 (オフィス・学園・年上年下ほか)</li>
-        </ul>
-        <div class="s-cta">👉 行きに一話、帰りに一話。</div>
-      </div>
-      <div>
-        <div class="service-phone">
-          <div class="phone-screen">
-            <div class="reader-bar">
-              <div>
-                <div class="chapter">3話 · 2,486字</div>
-                <div class="mono">5分22秒 読書中</div>
-              </div>
-              <div class="mono" style="font-size:11px;color:var(--accent)">Aa</div>
-            </div>
-            <div class="reader-progress" style="width:55%;top:66px"></div>
-            <div class="reader-body" style="margin-top:4px">
-              <p>퇴근길 지하철은 유난히 조용했다. 창밖으로 흐르는 불빛은 어제와 같은 속도였는데,</p>
-              <p>오늘은 그녀의 얼굴이 너무 가까웠다. <span class="red">"이 정거장에서 내려요."</span></p>
-              <p>그 말은 분명 안내방송이었지만, 그녀는 이쪽을 보고 있었다. 두 정거장이 남았다.</p>
-              <p style="color:var(--ink-50)">── 3화 계속 ──</p>
-            </div>
-            <div class="reader-footer">
-              <span>CH. 03 / 06</span>
-              <span>★ 4.7 · 3,284명</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tab 2: AV -->
-    <div class="service-grid tab-panel" data-panel="2" style="display:none">
-      <div class="service-left">
-        <h3 class="s-title">AV韓国語キュレーション — 準備中</h3>
-        <p class="s-body">ブックマーク同期、趣向に基づく推薦を2026年内に順次公開。今は何も無い、というのが正確な答えです。</p>
-        <ul class="s-bullets">
-          <li>端末間ブックマーク同期 (iCloud · Google)</li>
-          <li>タグ嗜好ベースのパーソナライズ</li>
-          <li>韓国語タイトル・字幕を優先表示</li>
-        </ul>
-        <div class="s-cta">👉 ベータ通知をONにしておくと初日にプッシュします。</div>
-      </div>
-      <div>
-        <div class="service-phone">
-          <div class="phone-screen">
-            <div class="av-lock">
-              <div class="grid-mosaic"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="badge">COMING SOON</div>
-              <h4>AV 한국어 큐레이션</h4>
-              <p>準備中 · 2026年内公開予定</p>
-              <div style="font-family:var(--ff-mono);font-size:10px;color:var(--ink-50)">[ 북마크 동기화 ] [ 취향 추천 ] [ 한국어 정렬 ]</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="maker-note">
-      <div class="avatar-stack">
-        <div class="avatar">K</div>
-        <div class="avatar">J</div>
-      </div>
-      <div class="mn-text">
-        <b>作っている本人が直接返信します。</b>
-        <small>メールはたいてい24時間以内に本人から返信。</small>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section reveal" id="testi">
-  <div class="container">
-    <header class="section-head">
-      <span class="kicker">03 — ベータユーザー</span>
-      <h2 class="section-title">ベータ利用者ふたりの声。</h2>
-      <p class="section-sub">過剰なドラマは省いて、そのまま掲載。</p>
-    </header>
-
-    <div class="testi-wrap">
-      <div class="testi-track" id="testiTrack">
-        <article class="testi-card">
-          <p class="body">機能は単純だけど、それがむしろ楽。出勤のときはフィード5分、退勤のときは小説1話。読んでいる途中に広告が割り込まないから、静かに読めます。</p>
-          <div class="meta">
-            <span class="name">— キムさん</span>
-            <span class="sub">34歳 / ITプランナー / ベータ3ヶ月</span>
-          </div>
-        </article>
-        <article class="testi-card">
-          <p class="body">2週間前に「小説のフォントサイズが変えられない」とメールしたら、<b>次のアップデートに反映。</b>作品数はまだ少ないけど、更新が続くから待てます。</p>
-          <div class="meta">
-            <span class="name">— パクさん</span>
-            <span class="sub">29歳 / マーケター / ベータ2ヶ月</span>
-          </div>
-        </article>
-        <article class="testi-card">
-          <p class="body">電車でスマホを握っているとき、隣の人の目を気にしなくて良いのが一番大きい。サムネのぼかしとタイトルの言い換えで、<b>会社でも気兼ねなく開けます。</b></p>
-          <div class="meta">
-            <span class="name">— イさん</span>
-            <span class="sub">38歳 / エンジニア / ベータ4ヶ月</span>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <div class="testi-controls">
-      <button class="testi-arrow" id="testiPrev">←</button>
-      <button class="testi-arrow" id="testiNext">→</button>
-      <div class="testi-dots" id="testiDots">
-        <div class="dot active" data-idx="0"></div>
-        <div class="dot" data-idx="1"></div>
-        <div class="dot" data-idx="2"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final reveal" id="final">
-  <div class="container final-inner">
-    <div>
-      <span class="kicker">04 — インストール</span>
-      <h2 class="section-title" style="margin-top:12px">まだ初期バージョンです。
-だからこそ、早く良くなります。</h2>
-      <div class="final-body">
-        <p>機能は多くありません。バグもたまにあります。</p>
-        <p><span class="emph">でも、いただいた意見は平均11日で次のビルドに反映されます。</span></p>
-        <p>メールをどうぞ。作っている本人が読みます。</p>
-      </div>
-
-      <ul class="final-checks">
-        <li>登録・カード・電話番号不要ですぐ起動</li>
-        <li>読書を邪魔する広告なし · ポップアップ0 · プッシュ通知0</li>
-        <li>意見には24時間以内に本人が返信</li>
-      </ul>
-
-      <div class="store-buttons">
-        <a class="store-badge google on-dark" href="https://play.google.com/store/apps/details?id=io.github.gptinfo.app" target="_blank" rel="noopener noreferrer">
-          <svg class="store-badge-icon" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734c0-.382.218-.72.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zM19.32 11.2l2.48 1.44c.48.28.48.72 0 1l-2.48 1.44-2.666-2.666L19.32 11.2zM5.864 3.471L16.8 9.804l-2.302 2.302L5.864 3.471z"/></svg>
-          <span class="store-badge-text">
-            <small>GET IT ON</small>
+<!-- ═══ CTA ═══ -->
+<section class="cta-section" id="download">
+  <div class="cta-box">
+    <div class="cta-inner">
+      <div class="cta-kicker">ダウンロード · DOWNLOAD</div>
+      <h2 class="cta-title">今日から始める <em>韓国文化の旅。</em></h2>
+      <p class="cta-sub">永久無料。すでに12,000+人が自分の言語で韓国を楽しんでいます — ファンフォーラムからミシュランまで。</p>
+      <div class="cta-ctas">
+        <a class="cta-btn cta-btn-primary" href="https://play.google.com/store/apps/details?id=io.github.gptinfo.app" target="_blank" rel="noopener" onclick="if(window.trackEvent)trackEvent('click_play_store_cta')">
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="none" aria-hidden="true">
+            <path d="M1.5 1.3L11 9 1.5 16.7V1.3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="hero-cta-text">
+            <small>ダウンロード</small>
             <b>Google Play</b>
           </span>
         </a>
-        <div class="store-badge apple on-dark disabled">
-          <svg class="store-badge-icon" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <span class="store-badge-text">
-            <small>リリース準備中</small>
+        <div class="cta-btn cta-btn-secondary" aria-disabled="true" title="Coming soon">
+          <span class="hero-cta-text">
+            <small>近日公開</small>
             <b>App Store</b>
           </span>
         </div>
       </div>
-
-      <div class="final-foot">
-        <span>完全無料。登録なしで開始。</span>
-        <span>お問い合わせ: hello@ssullemon.app</span>
-      </div>
-    </div>
-
-    <div class="qr-block">
-      <div class="qr-img"><div class="qr-fake"></div></div>
-      <div>
-        <div class="mono" style="margin-bottom:4px">BETA ACCESS</div>
-        <div style="color:var(--bg);font-size:14px;line-height:1.5">
-          베타 참여 신청 폼.<br>QR 스캔 → 이메일 한 줄이면 끝.
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer container">
-  <div>ssullemon — 静かに読むのに良いもの。</div>
-  <div class="mono" style="font-size:11px">Made by 2 people in Seoul · © 2026</div>
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <span class="nav-brand-mark">K</span>
+        <b>ssullemon</b>
+      </div>
+      <div class="footer-tagline">韓国のすべてを、
+あなたの言葉で。</div>
+    </div>
+    <div class="footer-col">
+      <h4>プロダクト</h4>
+      <ul>
+        <li><a href="#features">機能</a></li>
+        <li><a href="#modes">モード</a></li>
+        <li><a href="#languages">言語</a></li>
+        <li><a href="#">ロードマップ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>会社</h4>
+      <ul>
+        <li><a href="#">会社情報</a></li>
+        <li><a href="#">ブログ</a></li>
+        <li><a href="mailto:hello@ssullemon.app">お問い合わせ</a></li>
+        <li><a href="#">プレス</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>規約</h4>
+      <ul>
+        <li><a href="/ja/community/privacy/">プライバシー</a></li>
+        <li><a href="/ja/community/terms/">利用規約</a></li>
+        <li><a href="#">ライセンス</a></li>
+        <li><a href="#">クレジット</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 ssullemon. All rights reserved.</div>
+    <div class="footer-contact">
+      <span>hello@ssullemon.app</span>
+      <span>·</span>
+      <span>ソウル · 東京 · シンガポール</span>
+    </div>
+  </div>
 </footer>
 
-</div>
-
-<!-- Tracker -->
 <script src="../src/tracker.js"></script>
-
-<!-- Vanilla JS for interactions -->
-<script>
-(function(){
-  // Scroll reveal
-  var els = document.querySelectorAll('.reveal');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
-  els.forEach(function(el){ io.observe(el); });
-
-  // Count-up animation
-  document.querySelectorAll('[data-countup]').forEach(function(el){
-    var target = el.getAttribute('data-countup');
-    var n = parseFloat(target.replace(/[^\d.]/g,'')) || 0;
-    var hasRange = target.includes('~');
-    var original = el.textContent;
-    el.textContent = '0';
-    var io2 = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(!e.isIntersecting) return;
-        io2.unobserve(e.target);
-        if(hasRange){ e.target.textContent = target; return; }
-        var start = performance.now();
-        function tick(t){
-          var p = Math.min(1,(t-start)/1400);
-          var eased = 1 - Math.pow(1-p,3);
-          e.target.textContent = Math.round(n*eased);
-          if(p<1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      });
-    },{threshold:0.4});
-    io2.observe(el);
-  });
-
-  // Tabs
-  document.querySelectorAll('.tab[data-tab]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var idx = this.getAttribute('data-tab');
-      document.querySelectorAll('.tab[data-tab]').forEach(function(b){ b.classList.remove('active'); });
-      this.classList.add('active');
-      document.querySelectorAll('.tab-panel').forEach(function(p){
-        p.style.display = p.getAttribute('data-panel') === idx ? '' : 'none';
-      });
-    });
-  });
-
-  // Testimonial carousel
-  var track = document.getElementById('testiTrack');
-  var dots = document.querySelectorAll('#testiDots .dot');
-  var idx = 0, count = 3;
-  function goTo(i){
-    idx = ((i % count) + count) % count;
-    var cards = track.querySelectorAll('.testi-card');
-    if(!cards.length) return;
-    var card = cards[0];
-    var style = getComputedStyle(track);
-    var gap = parseFloat(style.gap) || 24;
-    var w = card.offsetWidth + gap;
-    track.style.transform = 'translateX(-' + (idx * w) + 'px)';
-    dots.forEach(function(d,j){ d.classList.toggle('active', j===idx); });
-  }
-  document.getElementById('testiPrev').addEventListener('click', function(){ goTo(idx-1); });
-  document.getElementById('testiNext').addEventListener('click', function(){ goTo(idx+1); });
-  dots.forEach(function(d){ d.addEventListener('click', function(){ goTo(+this.getAttribute('data-idx')); }); });
-  window.addEventListener('resize', function(){ goTo(idx); });
-  setInterval(function(){ goTo(idx+1); }, 5000);
-
-  // Theme toggle (from localStorage)
-  var theme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', theme);
-})();
-</script>
+<script src="../src/app.js"></script>
 </body>
 </html>
