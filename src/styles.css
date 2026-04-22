@@ -108,7 +108,9 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; letter-spacing: -0.02em; color: var(--ink); }
-.nav-brand-mark { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--ink)); display: grid; place-items: center; color: var(--bg-elev); font-size: 16px; font-weight: 800; }
+.nav-brand-mark { display: block; border-radius: 7px; }
+img.nav-brand-mark { width: 28px; height: 28px; }
+.footer-brand img.nav-brand-mark { width: 24px; height: 24px; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-link { color: var(--muted); font-size: 14px; font-weight: 500; transition: color 0.2s; }
 .nav-link:hover { color: var(--ink); }
